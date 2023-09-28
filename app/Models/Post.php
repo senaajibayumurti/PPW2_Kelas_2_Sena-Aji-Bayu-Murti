@@ -9,9 +9,13 @@ class Post extends Model
 {
     use HasFactory;
 
-    /**
-     * fillable
-     *
-     * @var array
-     */
+    protected $table = 'posts';
+    protected $primaryKey = 'id';
+    protected $fillabel = ['image', 'title', 'content'];
+
+    //  $table->id();
+    //         $table->string('image');
+    //         $table->string('title');
+    //         $table->text('content');
+    //         $table->timestamps();
 }
